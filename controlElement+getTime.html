@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlElemenr</title>
+    <style>
+        p{
+            width:300px;
+            height:30px;
+            line-height:30px;
+            color:#fff
+            background-color:cornflowerblue
+        }
+    </style>
+</head>
+<body>
+    <h1>操作元素与获取系统当前时间</h1>
+    <b>改变元素内容有两种方法</b>
+  <dl>
+      <dt style="background-color: gainsboro;">element.innerText</dt>
+      <dd>从起始位置到终止位置的内容，去除html标签，空格和换行也会去掉</dd>
+      <dt style="background-color: gainsboro;">element.innerHTML</dt>
+      <dd>起始位置到终止位置的全部内容，包括标签，保留空格和换行</dd>
+  </dl>
+  <ul style="background-color:aquamarine;"><h5>具体操作流程</h5>
+      <li>1.获取元素</li>
+      <li>2.注册事件</li>
+  </ul>
+  <h2>example</h2>
+  <ol>
+      <li>触发事件改变内容</li>
+      <li>不添加事件自动刷新内容</li>
+  </ol>
+  
+  <div style="background-color: bisque;">
+  <button>获取当前事件</button>
+  <div id="div">点击获取当前时间吧</div>
+  </div>
+  <p id="p">自动刷新的p</p>
+  <script>
+      //获取系统的当前时间
+     function getDate(){
+     var date=new Date()
+     //20--年-月-日 星期-
+     var year=date.getFullYear();
+     var month=date.getMonth()+1;
+     var dates=date.getDate();
+     var day=date.getDay();
+     console.log(day)
+     var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+     return '今天是'+year+'年'+month+'月'+dates+'日'+arr[day]
+     }
+
+
+  //1.点击触发元素事件
+      var btn=document.querySelector('button')
+      var div=document.getElementById('div')
+      var p=document.getElementById('p');
+     btn.onclick=function(){
+         div.innerText=getDate()
+         console.log("try my best")
+     }
+
+   //2.元素不添加事件
+   var p=document.querySelector('p');
+     p.innerText=getDate()
+  </script>
+</body>
+</html>

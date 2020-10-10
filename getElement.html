@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElements</title>
+</head>
+<body>
+    <div id="time">2019-9-9</div>
+    <h1>五大获取元素的方法</h1>
+    <p>Let's begin</p>
+    <ol>
+        <li>根据id来获取_getElementById</li>
+        <li>还可以获取某个元素的指定标签名的子元素_hey.getElementById()</li>
+        <li>根据类名获取某些元素集合_getElementByClassName()</li>
+        <li>querySelector 返回指定选择器的第一个元素对象_querySelector</li>
+        <li>quesrySelectorAll()返回指定选择器的所有对象_QuerySelectorAll</li>
+    </ol>
+    <div class="box">第一个盒子</div>
+    <div class='box'>第二个盒子</div>
+    <script>
+        //1.文档从上往下加载，先要有标签，则script需要写到标签的下面
+        //2.get获得element 元素by 驼峰命名法
+        //3.返回的是元素对象
+
+//1.根据id来获取
+        var timer=document.getElementById('time');
+        console.dir(timer)
+        //返回元素对象，更好的查看里面的属性和方法
+
+        //Ⅱ根据标签名来获取
+        var list=document.getElementsByTagName('li')
+        console.dir(list)
+        //返回元素对象的集合 以伪数组的形式存储的
+        
+
+        console.log(hey)
+        for(i=0;i<list.length;i++){
+            console.log(list[i])
+        }
+//2.还可以获取某个元素的指定标签名的子元素
+         //element.getElementsTagName('标签名')
+
+        console.log("This is the try output")
+        var hey=document.getElementsByTagName('ol')
+        console.log(hey[0].getElementsByTagName('li'));
+//3.根据类名获取某些元素集合
+//4.querySelector 返回指定选择器的第一个元素对象
+        var first=document.querySelector('.box');//类加. id加#
+        console.log(first);
+//5.quesrySelectorAll()返回指定选择器的所有对象
+    </script>
+</body>
+</html>

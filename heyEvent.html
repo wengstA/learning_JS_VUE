@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi EVENTS</title>
+</head>
+<body>
+    <button id="onClick">鼠标点击左键触发</button>
+    <button id="onmouseover">鼠标经过触发</button>
+    <button id="onmouseout">鼠标离开触发</button>
+    <button id="onfocus">获得鼠标焦点触发</button>
+    <button id="onmousemove">鼠标移动出发</button>
+    <button id="onmouseup">鼠标弹起触发</button>
+    <script>
+        onClick=document.getElementById('onClick')
+        onClick.onclick=function()
+        {
+           alert('语法是Hey.onclick')
+        }
+        onMouseOver=document.getElementById('onmouseover')
+        onMouseOver.onmouseover=function()
+        {
+            alert("语法是onmouseover")
+        }
+        all=document.getElementById('onmouseout')
+        all.onmouseout=function()
+        {
+            alert('语法是onmouseout')
+        }
+        all=document.getElementById('onfocus')
+        all.onfocus=function()
+        {
+            alert('语法是onfocus')
+        }
+        all=document.getElementById('onmousemove')
+        all.onmousemove=function()
+        {
+            alert('语法是onmousemove')
+        }
+        all=document.getElementById('onmouseup')
+        all.onmouseup=function()
+        {
+            alert('语法是onmouseup')
+        }
+    </script>
+</body>
+</html>
